@@ -4,10 +4,12 @@ import Link from "next/link";
 import cs from "../cs.png";
 import management from "../management.png";
 import massmedia from "../massmedia.png";
+import pennstate from "../penn-state.png";
 
 const page = () => {
   return (
     <>
+      <title>Home</title>
       <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
         {/* Overlay  */}
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/30 z-[2]" />
@@ -21,7 +23,13 @@ const page = () => {
       <div className="flex flex-col items-center justify-center">
         <h2 className="text-5xl font-bold text-center mb-5">This is VIIE</h2>
         <p className="text-center">
-          Vidyalankar has collaborated with top universities in the USA, CANADA, UK, Australia, and New Zealand and has developed some unique programs at the undergraduate and postgraduate levels. Our programs equip the students with the right toolset, suitable skillset and, more importantly, the right mindset. Ever since they were started in 2006, they have been well received by the students, their parents and by the industry.
+          Vidyalankar has collaborated with top universities in the USA, CANADA,
+          UK, Australia, and New Zealand and has developed some unique programs
+          at the undergraduate and postgraduate levels. Our programs equip the
+          students with the right toolset, suitable skillset and, more
+          importantly, the right mindset. Ever since they were started in 2006,
+          they have been well received by the students, their parents and by the
+          industry.
         </p>
         {/* <button className="mx-auto bg-red-600 p-1">More about VIIE</button> */}
         <Link href="/about">
@@ -34,22 +42,42 @@ const page = () => {
         <h1 className="mx-auto text-4xl font-bold mb-5">Academics</h1>
         <p className="mb-8 px-6 text-center">
           The main objective of education is to equip students with the
-          necessary skills <br/> and knowledge to actively participate as responsible
-          members of society and make significant <br/> contributions.
+          necessary skills <br /> and knowledge to actively participate as
+          responsible members of society and make significant <br />{" "}
+          contributions.
         </p>
         <div className="flex flex-row justify-center py-4 px-10">
-          <div className="px-5">
-            <Image src={cs} alt="Computer Science Program" width={300} height={300} />
+          <div className="px-5 hover:scale-125 transition-all duration-500 cursor-pointer">
+            <Image
+              src={cs}
+              alt="Computer Science Program"
+              width={300}
+              height={300}
+            />
+            <p>Computer Science/IT</p>
           </div>
 
-          <div className="px-5">
-            <Image src={management} alt="Computer Science Program" width={300} height={300} />
+          <div className="px-5 hover:scale-125 transition-all duration-500 cursor-pointer">
+            <Image
+              src={management}
+              alt="Management Program"
+              width={300}
+              height={300}
+            />
+            <p>Management</p>
           </div>
 
-          <div className="px-5">
-            <Image src={massmedia} alt="Computer Science Program" width={300} height={300} />
+          <div className="px-5 hover:scale-125 transition-all duration-500 cursor-pointer">
+            <Image
+              src={massmedia}
+              alt="Mass Media Program"
+              width={300}
+              height={300}
+            />
+            <p>Mass Media</p>
           </div>
         </div>
+        <br />
       </div>
     </>
   );

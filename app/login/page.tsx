@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import about from "../../about.jpg";
+import about from "../../login.jpg";
 
-function page() {
+const page = () => {
   return (
     <>
       <head>
-        <title>About VIIE</title>
+        <title>Login</title>
       </head>
 
       <div>
@@ -17,15 +17,17 @@ function page() {
             alt=""
             className="w-full h-full object-cover absolute mix-blend-overlay"
           />
-          {/* <img src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80' className='w-full h-full object-cover absolute mix-blend-overlay' /> */}
           <div className="py-40 flex justify-center items-center">
-            <h1 className="text-white text-6xl font-serif">About VIIE</h1>
+            <h1 className="text-white text-6xl font-serif">
+              Account Management
+            </h1>
           </div>
         </div>
+
         <h1>Hello</h1>
       </div>
     </>
   );
-}
+};
 
 export default page;

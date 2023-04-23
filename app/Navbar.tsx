@@ -52,6 +52,13 @@ const Navbar = () => {
           <li className="p-4">
             <Link href="/partner-with-us">Partner with us</Link>
           </li>
+          <li className="p-4">
+            <Link href="/login">
+              <button className="bg-[#9c0e0e] text-white font-bold py-1 px-4 rounded">
+                Login
+              </button>
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile Button */}
