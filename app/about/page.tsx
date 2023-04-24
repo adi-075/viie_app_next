@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import about from "../../about.jpg";
@@ -22,6 +21,7 @@ function page() {
             <h1 className="text-white text-6xl font-serif">About VIIE</h1>
           </div>
         </div>
+        
         <h1>Hello</h1>
       </div>
     </>
