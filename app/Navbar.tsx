@@ -3,12 +3,23 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import VIIE from "../VIIE-logo-1-600x174.png";
+import VIIE from "../VIIE-logo.png";
+import { Nunito } from "next/font/google";
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: "900",
+});
+import { Inter } from "next/font/google";
+const inter = Inter({
+  subsets: ["latin"],
+  weight: "800",
+});
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
+  const [aTextColor, setATextColor] = useState("white");
 
   const handleNav = () => {
     setNav(!nav);
@@ -17,11 +28,13 @@ const Navbar = () => {
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
-        setColor("#6B0707");
-        setTextColor("#ffffff");
+        setColor("#FFFFFF");
+        setTextColor("#6b7280");
+        setATextColor("#000000");
       } else {
         setColor("transparent");
         setTextColor("#ffffff");
+        setATextColor("#ffffff");
       }
     };
     window.addEventListener("scroll", changeColor);
@@ -37,22 +50,33 @@ const Navbar = () => {
           {/* <h1 style={{ color: `${textColor}` }} className="font-bold text-4xl">
             Captur
           </h1> */}
-          <Image src={VIIE} alt="VIIE Picture" width={300} height={500} />
+          <div className="flex">
+            <Image src={VIIE} alt="VIIE Picture" width={60} height={60} />
+            {/* <h1 style={{color: `${textColor}`}} className="px-2 mt-2 font-bold text-md">VIDYALANKAR INSTITUTE FOR <br/> INTERNATIONAL EDUCATION</h1> */}
+            <div className="px-2 mt-2">
+              <h1
+                style={{ color: `${aTextColor}` }}
+                className={inter.className}
+              >
+                VIDYALANKAR INSTITUTE FOR <br /> INTERNATIONAL EDUCATION
+              </h1>
+            </div>
+          </div>
         </Link>
         <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
-          <li className="p-4">
+          <li className="p-4 font-semibold">
             <Link href="/about">About</Link>
           </li>
-          <li className="p-4">
+          <li className="p-4 font-semibold">
             <Link href="/courses">Courses</Link>
           </li>
-          <li className="p-4">
+          <li className="p-4 font-semibold">
             <Link href="/admission">Admission</Link>
           </li>
-          <li className="p-4">
+          <li className="p-4 font-semibold">
             <Link href="/partner-with-us">Partner with us</Link>
           </li>
-          <li className="p-4">
+          <li className="p-4 font-semibold">
             <Link href="/login">
               <button className="bg-[#9c0e0e] text-white font-bold py-1 px-4 rounded">
                 Login
