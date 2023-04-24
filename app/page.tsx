@@ -5,12 +5,14 @@ import cs from "../cs.png";
 import management from "../management.png";
 import massmedia from "../massmedia.png";
 import pennstate from "../penn-state.png";
+import alumni from "../alumni.png";
+import "./homepage.css";
 
 const page = () => {
   return (
     <>
       <title>Home</title>
-      <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
+      <div className="flex items-center justify-center h-screen mb-12 bg-scroll sm:bg-fixed bg-center bg-cover custom-img">
         {/* Overlay  */}
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/30 z-[2]" />
         <div className="p-5 text-white z-[2] mt-[-10rem]">
@@ -24,12 +26,13 @@ const page = () => {
         <h2 className="text-5xl font-bold text-center mb-5">This is VIIE</h2>
         <p className="text-center">
           Vidyalankar has collaborated with top universities in the USA, CANADA,
-          UK, Australia, and New Zealand and has developed some unique programs <br />
+          UK, Australia, and New Zealand and has developed some unique programs{" "}
+          <br />
           at the undergraduate and postgraduate levels. Our programs equip the
           students with the right toolset, suitable skillset and, more
-          importantly, the right  <br /> mindset. Ever since they were started in 2006,
-          they have been well received by the students  <br />, their parents and by the
-          industry.
+          importantly, the right <br /> mindset. Ever since they were started in
+          2006, they have been well received by the students <br />, their
+          parents and by the industry.
         </p>
         {/* <button className="mx-auto bg-red-600 p-1">More about VIIE</button> */}
         <Link href="/about">
