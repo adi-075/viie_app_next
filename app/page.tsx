@@ -1,12 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import cs from "../cs.png";
-import management from "../management.png";
-import massmedia from "../massmedia.png";
-import pennstate from "../penn-state.png";
-import alumni from "../alumni.png";
-import "./homepage.css";
+import { homeData } from "./homeData";
+// import "./homepage.css";
 
 const page = () => {
   return (
@@ -52,7 +48,7 @@ const page = () => {
         <div className="flex flex-row justify-center py-4 px-10">
           <div className="px-5 hover:scale-125 transition-all duration-500 cursor-pointer">
             <Image
-              src={cs}
+              src="/images/cs.png"
               alt="Computer Science Program"
               width={300}
               height={300}
@@ -62,7 +58,7 @@ const page = () => {
 
           <div className="px-5 hover:scale-125 transition-all duration-500 cursor-pointer">
             <Image
-              src={management}
+              src="/images/management.png"
               alt="Management Program"
               width={300}
               height={300}
@@ -72,7 +68,7 @@ const page = () => {
 
           <div className="px-5 hover:scale-125 transition-all duration-500 cursor-pointer">
             <Image
-              src={massmedia}
+              src="/images/massmedia.png"
               alt="Mass Media Program"
               width={300}
               height={300}
@@ -80,8 +76,40 @@ const page = () => {
             <p>Mass Media</p>
           </div>
         </div>
+
+        {/* Inserted Changes Here  */}
+
         <br />
       </div>
+      {/* <div className="image">
+          <Image
+            className="image__img"
+            src={pennstate}
+            alt="Penn State Campus"
+            width={2560}
+            height={1660}
+          />
+          <div className="image__overlay image__overlay--blur">
+            <div className="image__title">
+              <div className="flex flex-col items-center justify-center">
+                <Image
+                  src={alumni}
+                  alt="Alumni"
+                  width={200}
+                  height={200}
+                  className="mx-auto"
+                />
+                <q className="ml-20 text-justify text-md p-5">
+                  Vidyalankar Institute for International Education provided me
+                  with not just a world-class education, but also an enriching
+                  cultural experience that broadened my horizons and prepared me
+                  for success in a globalized world.
+                </q>
+              </div>
+            </div>
+            {/* <p className="image__description">Here we have the Alumni</p> */}
+      {/* </div>
+        </div>  */}
     </>
   );
 };
