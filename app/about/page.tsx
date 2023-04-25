@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import about from "../../public/images/about.jpg";
+import about from "../../BG Image.jpg";
 
 function page() {
   return (
