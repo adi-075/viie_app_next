@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import about from "../../login.jpg";
@@ -13,6 +12,7 @@ const page = () => {
       <div>
         <div className="bg-gradient-to-tl from-purple-900 to-green-900 h-96 w-full relative">
           <Image
+            priority
             src={about}
             alt=""
             className="w-full h-full object-cover absolute mix-blend-overlay"
