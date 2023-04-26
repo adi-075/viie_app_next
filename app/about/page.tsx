@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-// import about from "../../public/images/about.jpg";
+import about from "../../public/images/Auditorium.png";
 
 function page() {
   return (
@@ -14,7 +14,7 @@ function page() {
         <div className="w-full h-96 relative">
           <Image
             priority
-            src="/images/auditorium.png"
+            src={about}
             alt="About Image"
             width={2500}
             height={1660}
