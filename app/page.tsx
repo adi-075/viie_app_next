@@ -2,15 +2,17 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { homeData } from "./homeData";
+import { Mandali } from "next/font/google";
+import Events from "./Events";
 // import "./homepage.css";
 
 const page = () => {
   return (
     <>
       <title>Home</title>
-      <div className="flex items-center justify-center h-screen mb-12 bg-scroll sm:bg-fixed bg-center bg-cover custom-img">
+      <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
         {/* Overlay  */}
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/30 z-[2]" />
+        <div className="absolute top-0 left-0 right-0 bottom-0 z-[2]" />
         <div className="p-5 text-white z-[2] mt-[-10rem]">
           <h2 className="text-5xl font-bold text-center">
             Welcome to Vidyalankar <br /> Institute for International <br />{" "}
@@ -77,39 +79,27 @@ const page = () => {
           </div>
         </div>
 
-        {/* Inserted Changes Here  */}
-
         <br />
       </div>
-      {/* <div className="image">
-          <Image
-            className="image__img"
-            src={pennstate}
-            alt="Penn State Campus"
-            width={2560}
-            height={1660}
-          />
-          <div className="image__overlay image__overlay--blur">
-            <div className="image__title">
-              <div className="flex flex-col items-center justify-center">
-                <Image
-                  src={alumni}
-                  alt="Alumni"
-                  width={200}
-                  height={200}
-                  className="mx-auto"
-                />
-                <q className="ml-20 text-justify text-md p-5">
-                  Vidyalankar Institute for International Education provided me
-                  with not just a world-class education, but also an enriching
-                  cultural experience that broadened my horizons and prepared me
-                  for success in a globalized world.
-                </q>
-              </div>
+      <section className="mx-auto w-fit p-12">
+        <h1 className="font-bold text-black text-2xl text-center">Under Development</h1>
+        {/* card  */}
+        <div className="w-72 h-fit group">
+          <div className="relative overflow-hidden">
+            <Image
+              src="/images/penn-state.png"
+              alt="Penn State Campus"
+              className="object-fill h-48 w-96"
+              width={200}
+              height={200}
+            />
+            <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 hover:opacity-100 transition-all duration-300">
+              <button className="bg-black text-white py-2 px-5">Alumni</button>
             </div>
-            {/* <p className="image__description">Here we have the Alumni</p> */}
-      {/* </div>
-        </div>  */}
+          </div>
+        </div>
+      </section>
+      <Events />
     </>
   );
 };
