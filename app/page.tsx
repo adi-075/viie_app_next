@@ -82,7 +82,9 @@ const page = () => {
         <br />
       </div>
       <section className="mx-auto w-fit p-12">
-        <h1 className="font-bold text-black text-2xl text-center">Under Development</h1>
+        <h1 className="font-bold text-black text-2xl text-center">
+          Under Development
+        </h1>
         {/* card  */}
         <div className="w-72 h-fit group">
           <div className="relative overflow-hidden">
