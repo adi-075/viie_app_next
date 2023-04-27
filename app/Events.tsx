@@ -7,7 +7,7 @@ const Events = () => {
     <div className="flex flex-col justify-center bg-[#f4f4f4] h-full">
       <h1 className="mx-auto text-4xl font-bold mb-5 my-10">Upcoming Events</h1>
       <div className="my-5">
-        <ul className="event-list grid grid-flow-col gap-14 justify-center">
+        <ul className="event-list grid grid-fow-row sm:grid-flow-col gap-14 justify-center">
           <li className="event w-64">
             <article className="event-card bg-white shadow-lg">
               <div className="container">
