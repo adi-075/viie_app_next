@@ -22,7 +22,7 @@ const page = () => {
       </div>
       <div className="flex flex-col items-center justify-center">
         <h2 className="text-5xl font-bold text-center mb-5">This is VIIE</h2>
-        <p className="text-center">
+        <p className="text-center p-3 sm:p-0">
           Vidyalankar has collaborated with top universities in the USA, CANADA,
           UK, Australia, and New Zealand and has developed some unique programs{" "}
           <br />
@@ -40,14 +40,14 @@ const page = () => {
         </Link>
       </div>
       <div className="flex flex-col justify-center bg-[#f4f4f4]">
-        <h1 className="mx-auto text-4xl font-bold mb-5">Academics</h1>
+        <h1 className="mx-auto text-4xl font-bold mb-5 my-10">Academics</h1>
         <p className="mb-8 px-6 text-center">
           The main objective of education is to equip students with the
           necessary skills <br /> and knowledge to actively participate as
           responsible members of society and make significant <br />{" "}
           contributions.
         </p>
-        <div className="event-list grid grid-fow-row sm:grid-flow-col gap-14 justify-center">
+        <div className="event-list grid grid-fow-row md:grid-flow-col gap-10 md:gap-14 justify-center px-2">
           <div className="hover:scale-125 transition-all duration-500 cursor-pointer">
             <Image
               src="/images/cs.png"
