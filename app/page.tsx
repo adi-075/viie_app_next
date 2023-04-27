@@ -47,8 +47,8 @@ const page = () => {
           responsible members of society and make significant <br />{" "}
           contributions.
         </p>
-        <div className="flex flex-row justify-center py-4 px-10">
-          <div className="px-5 hover:scale-125 transition-all duration-500 cursor-pointer">
+        <div className="event-list grid grid-fow-row sm:grid-flow-col gap-14 justify-center">
+          <div className="hover:scale-125 transition-all duration-500 cursor-pointer">
             <Image
               src="/images/cs.png"
               alt="Computer Science Program"
@@ -58,7 +58,7 @@ const page = () => {
             <p>Computer Science/IT</p>
           </div>
 
-          <div className="px-5 hover:scale-125 transition-all duration-500 cursor-pointer">
+          <div className="hover:scale-125 transition-all duration-500 cursor-pointer">
             <Image
               src="/images/management.png"
               alt="Management Program"
@@ -68,7 +68,7 @@ const page = () => {
             <p>Management</p>
           </div>
 
-          <div className="px-5 hover:scale-125 transition-all duration-500 cursor-pointer">
+          <div className="hover:scale-125 transition-all duration-500 cursor-pointer">
             <Image
               src="/images/massmedia.png"
               alt="Mass Media Program"
@@ -76,6 +76,7 @@ const page = () => {
               height={300}
             />
             <p>Mass Media</p>
+            <br />
           </div>
         </div>
 
