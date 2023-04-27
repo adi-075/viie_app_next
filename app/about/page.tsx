@@ -11,7 +11,7 @@ function page() {
 
       <div>
         {/* <div className="bg-gradient-to-tl from-purple-900 to-green-900 h-96 w-full relative"> */}
-        <div className="w-full h-96 relative">
+        <div className="w-screen h-60 sm:h-96 relative">
           <Image
             priority
             src={about}
