@@ -51,7 +51,13 @@ const Navbar = () => {
             Captur
           </h1> */}
           <div className="flex">
-            <Image src={VIIE} alt="VIIE Picture" width={60} height={60} className="sm:w-20 sm:h-20"/>
+            <Image
+              src={VIIE}
+              alt="VIIE Picture"
+              width={60}
+              height={60}
+              className="sm:w-20 sm:h-20"
+            />
             {/* <h1 style={{color: `${textColor}`}} className="px-2 mt-2 font-bold text-md">VIDYALANKAR INSTITUTE FOR <br/> INTERNATIONAL EDUCATION</h1> */}
             <div className="mt-2 sm:mt-4 ">
               <h1
@@ -125,6 +131,12 @@ const Navbar = () => {
               className="p-4 text-4xl hover:text-gray-500"
             >
               <Link href="/contact">Contact</Link>
+            </li>
+            <li
+              onClick={handleNav}
+              className="p-4 text-4xl hover:text-gray-500"
+            >
+              <Link href="/login">Login</Link>
             </li>
           </ul>
         </div>
