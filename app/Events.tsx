@@ -40,7 +40,7 @@ const Events = () => {
                 <h2 className="event-title">
                   <a
                     className="event-title__link font-semibold hover:text-blue-400"
-                    href="https://events.stanford.edu/event/longevitydesignchallenge2023?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Stanford+University"
+                    href="https://viie.edu.in/"
                   >
                     <br />
                     STUDY COMPUTER SCIENCE IN USA at half the cost.
@@ -88,7 +88,7 @@ const Events = () => {
                 <h2 className="event-title">
                   <a
                     className="event-title__link font-semibold hover:text-blue-400"
-                    href="https://events.stanford.edu/event/longevitydesignchallenge2023?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Stanford+University"
+                    href="https://viie.edu.in/"
                   >
                     <br />
                     STUDY COMPUTER SCIENCE IN USA at half the cost.
@@ -136,7 +136,7 @@ const Events = () => {
                 <h2 className="event-title">
                   <a
                     className="event-title__link font-semibold hover:text-blue-400"
-                    href="https://events.stanford.edu/event/longevitydesignchallenge2023?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Stanford+University"
+                    href="https://viie.edu.in/"
                   >
                     <br />
                     STUDY COMPUTER SCIENCE IN USA at half the cost.
