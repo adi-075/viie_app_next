@@ -17,6 +17,10 @@ body {
   background-image: url("https://cdn.dribbble.com/users/2487269/screenshots/8255481/media/1a80b001b4ce9d98c5b6d232bd0424a3.png");
 }
 
+.audi-img {
+  background-image: url("../public/images/audi.png");
+}
+
 .container {
   width: 256px;
   height: 200px;
