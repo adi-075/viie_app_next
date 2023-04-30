@@ -9,7 +9,13 @@ export default function page() {
         <div className="min-h-screen flex flex-col justify-center">
           <div className="max-w-md w-full mx-auto mt-5 sm:mt-0 bg-slate-100 p-8 mx-border border-gray-300 shadow-xl">
             <div className="max-w-md w-16 mx-auto">
-              <Image src={VIIE} alt="VIIE Picture" width={80} height={80} />
+              <Image
+                priority
+                src={VIIE}
+                alt="VIIE Picture"
+                width={80}
+                height={80}
+              />
             </div>
             <div className="text-3xl font-bold text-gray-900 mt-4 text-center">
               Welcome Back
