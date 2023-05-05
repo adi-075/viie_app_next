@@ -15,7 +15,8 @@ const timeline = () => {
     <div className="py-5">
       <Timeline
         color="red"
-        active={2}
+        active={10}
+        reverseActive
         lineWidth={1}
         bulletSize={12}
         align="left"
@@ -27,7 +28,7 @@ const timeline = () => {
             <div>
               <br />
               <Image
-                src="/images/penn-state.png"
+                src="/images/Uni/PSU.jpg"
                 width={300}
                 height={300}
                 alt="Penn State"
@@ -43,14 +44,14 @@ const timeline = () => {
           </Text>
         </Timeline.Item>
 
-        <Timeline.Item title="Penn State University" bulletSize={12}>
-          <h1 className="font-bold font-serif text-red-950">2006</h1>
+        <Timeline.Item title="California State University" bulletSize={12}>
+          <h1 className="font-bold font-serif text-red-950">2009</h1>
           <Text color="dimmed" size="md">
-            Program: BS [IST]
+            Program: BS [CS]
             <div>
               <br />
               <Image
-                src="/images/penn-state.png"
+                src="/images/Uni/CSU.jpg"
                 width={300}
                 height={300}
                 alt="Penn State"
@@ -66,14 +67,58 @@ const timeline = () => {
           </Text>
         </Timeline.Item>
 
-        <Timeline.Item title="Penn State University" bulletSize={12}>
-          <h1 className="font-bold font-serif text-red-950">2006</h1>
+        <Timeline.Item title="The University of Toledo" bulletSize={12}>
+          <h1 className="font-bold font-serif text-red-950">2013</h1>
           <Text color="dimmed" size="md">
-            Program: BS [IST]
+            Program: BBA
             <div>
               <br />
               <Image
-                src="/images/penn-state.png"
+                src="/images/Uni/UT.jpg"
+                width={300}
+                height={300}
+                alt="Penn State"
+              />
+              <br />
+            </div>
+            We began our journey in 2006 with <br />
+            Pennsylvania State University introducing <br /> its first 2 + 2
+            credit transfer program in BS <br /> [Information Sciences and
+            Technology] to
+            <br /> incorporate a compelling blend of national
+            <br /> and international teaching methodologies
+          </Text>
+        </Timeline.Item>
+        <Timeline.Item title="Rutgers University" bulletSize={12}>
+          <h1 className="font-bold font-serif text-red-950">2015</h1>
+          <Text color="dimmed" size="md">
+            Program: BS [CS]
+            <div>
+              <br />
+              <Image
+                src="/images/Uni/RUT.jpg"
+                width={300}
+                height={300}
+                alt="Penn State"
+              />
+              <br />
+            </div>
+            We began our journey in 2006 with <br />
+            Pennsylvania State University introducing <br /> its first 2 + 2
+            credit transfer program in BS <br /> [Information Sciences and
+            Technology] to
+            <br /> incorporate a compelling blend of national
+            <br /> and international teaching methodologies
+          </Text>
+        </Timeline.Item>
+        <Timeline.Item title="The University of Toledo" bulletSize={12}>
+          <h1 className="font-bold font-serif text-red-950">2015</h1>
+          <Text color="dimmed" size="md">
+            Program: MBA
+            <div>
+              <br />
+              <Image
+                src="/images/Uni/UT.jpg"
                 width={300}
                 height={300}
                 alt="Penn State"

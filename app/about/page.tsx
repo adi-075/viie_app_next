@@ -22,13 +22,13 @@ function page() {
           />
         </div>
 
-        <div className="md:flex justify-center items-center h-screen">
+        <div className="my-10 h-screen flex flex-col min-h-screen justify-center items-center">
           <div>
             <h1 className="text-4xl text-center font-bold py-5 px-2">
-              Our Journey
+              Timeline
             </h1>
           </div>
-          <div className="mx-4 h-screen">
+          <div className="h-screen min-w-fit">
             <Timeline />
           </div>
         </div>
