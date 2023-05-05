@@ -59,7 +59,7 @@ const Navbar = () => {
               className="sm:w-20 sm:h-20"
             />
             {/* <h1 style={{color: `${textColor}`}} className="px-2 mt-2 font-bold text-md">VIDYALANKAR INSTITUTE FOR <br/> INTERNATIONAL EDUCATION</h1> */}
-            <div className="mt-2 sm:mt-4 ">
+            <div className="mt-2 sm:mt-4">
               <h1
                 style={{ color: `${aTextColor}` }}
                 className={inter.className}
