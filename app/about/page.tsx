@@ -22,6 +22,26 @@ function page() {
           />
         </div>
 
+        <div className="my-16 flex flex-col mx-3 lg:flex-row lg:justify-center lg:items-center lg:mx-8">
+          <div>
+            <h1 className="text-red-900 text-sm font-serif py-4 uppercase">
+              About us
+            </h1>
+            <p className="text-3xl text-black font-bold font-serif break-normal">
+              We are the pioneers in developing the Global Pathway Programs
+            </p>
+          </div>
+          <div>
+            <p className="my-10 lg:mx-10 lg:my-0 text-gray-500 text-md font-sans font-normal break-word">
+              Our Global Pathway program gives students the best of both worlds;
+              studying initial years with us in India offers students a solid
+              foundation. The academic rigor makes them ready to take on
+              international challenges eventually. Vidyalankar has a legacy of
+              countless successful candidates over these 16 years of operation.
+            </p>
+          </div>
+        </div>
+
         <div className="my-10 h-screen flex flex-col min-h-screen justify-center items-center">
           <div>
             <h1 className="text-4xl text-center font-bold py-5 px-2">
