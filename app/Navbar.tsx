@@ -4,16 +4,11 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import VIIE from "../VIIE-logo.png";
-import { Nunito } from "next/font/google";
-const nunito = Nunito({
-  subsets: ["latin"],
-  weight: "900",
-});
+
 import { Inter } from "next/font/google";
-const inter = Inter({
-  subsets: ["latin"],
-  weight: "800",
-});
+
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({ subsets: ["latin"], weight: "700" });
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
