@@ -4,13 +4,14 @@ import Link from "next/link";
 import { homeData } from "./homeData";
 import { Mandali } from "next/font/google";
 import Events from "./Events";
+import bgmb from "../bg-image-mb.jpg";
 // import "./homepage.css";
 
 const page = () => {
   return (
     <>
       <title>Home</title>
-      <div className="flex items-center justify-center h-screen mb-12 bg-fixed sm:bg-center bg-cover custom-img-mb md:custom-img">
+      <div className="flex items-center justify-center h-screen mb-12 md:bg-fixed bg-center bg-cover custom-img-mb sm:custom-img">
         {/* Overlay  */}
         <div className="absolute top-0 left-0 right-0 bottom-0 z-[2]" />
         <div className="p-5 text-white z-[2] mt-[-10rem]">
