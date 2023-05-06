@@ -4,7 +4,7 @@ import VIIE from "../../VIIE-logo.png";
 
 export default function page() {
   return (
-    <div class="flex items-center justify-center h-screen bg-fixed bg-center bg-cover audi-img">
+    <div class="flex items-center justify-center min-h-screen md:h-screen sm:bg-fixed bg-center bg-no-repeat bg-cover audi-img">
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/30 z-[2]">
         <div className="min-h-screen flex flex-col justify-center">
           <div className="max-w-md w-full mx-auto mt-5 sm:mt-0 bg-slate-100 p-8 mx-border border-gray-300 shadow-xl">
