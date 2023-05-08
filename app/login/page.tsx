@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
+import { Popover } from "@mantine/core";
 import Image from "next/image";
 import VIIE from "../../VIIE-logo.png";
+import { useState } from "react";
 // Mantine Components
 import { useForm, isEmail } from "@mantine/form";
 import {
@@ -22,15 +24,16 @@ export default function Page() {
       email: "",
       rememberMe: false,
     },
-
     // functions will be used to validate values at corresponding key
     validate: {
       email: isEmail("Invalid email"),
     },
   });
 
+  const [popoverOpened, setPopoverOpened] = useState(false);
   const [value, setValue] = useInputState("");
   const strength = getStrength(value);
+  const color = strength === 100 ? "teal" : strength > 50 ? "yellow" : "red";
   const checks = requirements.map((requirement, index) => (
     <PasswordRequirement
       key={index}
@@ -90,22 +93,35 @@ export default function Page() {
                 {...form.getInputProps("email")}
               />
               <br />
-              <PasswordInput
-                value={value}
-                onChange={setValue}
-                placeholder="Your password"
-                label="Password"
-                required
-              />
-              <Group spacing={5} grow mt="xs" mb="md">
-                {bars}
-              </Group>
-
-              <PasswordRequirement
-                label="Has at least 6 characters"
-                meets={value.length > 5}
-              />
-              {checks}
+              <Popover
+                opened={popoverOpened}
+                position="bottom"
+                width="target"
+                transitionProps={{ transition: "pop" }}
+              >
+                <Popover.Target>
+                  <div
+                    onFocusCapture={() => setPopoverOpened(true)}
+                    onBlurCapture={() => setPopoverOpened(false)}
+                  >
+                    <PasswordInput
+                      withAsterisk
+                      label="Your password"
+                      placeholder="Your password"
+                      value={value}
+                      onChange={(event) => setValue(event.currentTarget.value)}
+                    />
+                  </div>
+                </Popover.Target>
+                <Popover.Dropdown>
+                  <Progress color={color} value={strength} size={5} mb="xs" />
+                  <PasswordRequirement
+                    label="Includes at least 6 characters"
+                    meets={value.length > 5}
+                  />
+                  {checks}
+                </Popover.Dropdown>
+              </Popover>
               <Checkbox
                 mt="md"
                 label="Remember Me"
