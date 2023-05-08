@@ -19,6 +19,9 @@ import {
   Box,
   Checkbox,
 } from "@mantine/core";
+import { Progress, PasswordInput, Text, Center } from "@mantine/core";
+import { useInputState } from "@mantine/hooks";
+import { IconCheck, IconX } from "@tabler/icons-react";
 
 export default function Page() {
   const form = useForm({
@@ -38,8 +41,35 @@ export default function Page() {
     },
   });
 
+  const [value, setValue] = useInputState("");
+  const strength = getStrength(value);
+  const checks = requirements.map((requirement, index) => (
+    <PasswordRequirement
+      key={index}
+      label={requirement.label}
+      meets={requirement.re.test(value)}
+    />
+  ));
+  const bars = Array(4)
+    .fill(0)
+    .map((_, index) => (
+      <Progress
+        styles={{ bar: { transitionDuration: "0ms" } }}
+        value={
+          value.length > 0 && index === 0
+            ? 100
+            : strength >= ((index + 1) / 4) * 100
+            ? 100
+            : 0
+        }
+        color={strength > 80 ? "teal" : strength > 50 ? "yellow" : "red"}
+        key={index}
+        size={4}
+      />
+    ));
+
   return (
-    <div class="flex items-center justify-center min-h-screen md:h-screen sm:bg-fixed bg-center bg-no-repeat bg-cover audi-img">
+    <div className="flex items-center justify-center min-h-screen md:h-screen sm:bg-fixed bg-center bg-no-repeat bg-cover audi-img">
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/30 z-[2]">
         <div className="min-h-screen flex flex-col justify-center">
           <div className="max-w-md w-full mx-auto mt-5 sm:mt-0 bg-slate-100 p-8 mx-border border-gray-300 shadow-xl">
@@ -72,12 +102,22 @@ export default function Page() {
                 {...form.getInputProps("email")}
               />
               <br />
-              <TextInput
-                withAsterisk
+              <PasswordInput
+                value={value}
+                onChange={setValue}
+                placeholder="Your password"
                 label="Password"
-                placeholder="Password"
-                {...form.getInputProps("password")}
+                required
               />
+              <Group spacing={5} grow mt="xs" mb="md">
+                {bars}
+              </Group>
+
+              <PasswordRequirement
+                label="Has at least 6 characters"
+                meets={value.length > 5}
+              />
+              {checks}
               <Checkbox
                 mt="md"
                 label="Remember Me"
@@ -108,4 +148,44 @@ export default function Page() {
       </div>
     </div>
   );
+}
+
+function PasswordRequirement({
+  meets,
+  label,
+}: {
+  meets: boolean;
+  label: string;
+}) {
+  return (
+    <Text color={meets ? "teal" : "red"} mt={5} size="sm">
+      <Center inline>
+        {meets ? (
+          <IconCheck size="0.9rem" stroke={1.5} />
+        ) : (
+          <IconX size="0.9rem" stroke={1.5} />
+        )}
+        <Box ml={7}>{label}</Box>
+      </Center>
+    </Text>
+  );
+}
+
+const requirements = [
+  { re: /[0-9]/, label: "Includes number" },
+  { re: /[a-z]/, label: "Includes lowercase letter" },
+  { re: /[A-Z]/, label: "Includes uppercase letter" },
+  { re: /[$&+,:;=?@#|'<>.^*()%!-]/, label: "Includes special symbol" },
+];
+
+function getStrength(password: string) {
+  let multiplier = password.length > 5 ? 0 : 1;
+
+  requirements.forEach((requirement) => {
+    if (!requirement.re.test(password)) {
+      multiplier += 1;
+    }
+  });
+
+  return Math.max(100 - (100 / (requirements.length + 1)) * multiplier, 0);
 }
