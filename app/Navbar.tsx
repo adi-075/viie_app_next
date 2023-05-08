@@ -40,21 +40,17 @@ const Navbar = () => {
       style={{ backgroundColor: `${color}` }}
       className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
     >
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
+      <div className="m-auto flex justify-between items-center p-4 text-white">
         <Link href="/">
-          {/* <h1 style={{ color: `${textColor}` }} className="font-bold text-4xl">
-            Captur
-          </h1> */}
           <div className="flex">
             <Image
               src={VIIE}
               alt="VIIE Picture"
               width={60}
               height={60}
-              className="w-12 h-12 lg:w-20 lg:h-20"
+              className="w-12 h-12 lg:w-14 lg:h-14"
             />
-            {/* <h1 style={{color: `${textColor}`}} className="px-2 mt-2 font-bold text-md">VIDYALANKAR INSTITUTE FOR <br/> INTERNATIONAL EDUCATION</h1> */}
-            <div className="mt-0 mx-1 block sm:hidden lg:mt-4 lg:block">
+            <div className="mt-0 mx-1 block sm:hidden lg:mt-1 lg:block">
               <h1
                 style={{ color: `${aTextColor}` }}
                 className={inter.className}
@@ -77,7 +73,7 @@ const Navbar = () => {
           <li className="p-4 font-semibold">
             <Link href="/partner-with-us">Partner with us</Link>
           </li>
-          <li className="p-4 font-semibold">
+          <li className="px-4 py-3 font-semibold">
             <Link href="/login">
               <button className="bg-[#9c0e0e] text-white font-bold py-1 px-4 rounded">
                 Login
@@ -94,6 +90,7 @@ const Navbar = () => {
             <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
           )}
         </div>
+
         {/* Mobile Menu */}
         <div
           className={
