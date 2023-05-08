@@ -42,6 +42,14 @@ function page() {
           </div>
         </div>
 
+        {/* <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center px-10 py-16">
+          <div>
+            <h1 className="text-red-900 font-bold font-serif text-center text-3xl">
+              Our Vision
+            </h1>
+          </div>
+        </div> */}
+
         <div className="my-10 h-screen flex flex-col min-h-screen justify-center items-center">
           <div>
             <h1 className="text-4xl text-center font-bold py-5 px-2">
