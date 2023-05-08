@@ -73,6 +73,9 @@ const Navbar = () => {
           <li className="p-4 font-semibold">
             <Link href="/partner-with-us">Partner with us</Link>
           </li>
+          <li className="p-4 font-semibold">
+            <Link href="/contact-us">Contact us</Link>
+          </li>
           <li className="px-4 py-3 font-semibold">
             <Link href="/login">
               <button className="bg-[#9c0e0e] text-white font-bold py-1 px-4 rounded">
