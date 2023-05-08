@@ -3,14 +3,7 @@ import React from "react";
 import Image from "next/image";
 import VIIE from "../../VIIE-logo.png";
 // Mantine Components
-import {
-  useForm,
-  isNotEmpty,
-  isEmail,
-  isInRange,
-  hasLength,
-  matches,
-} from "@mantine/form";
+import { useForm, isEmail } from "@mantine/form";
 import {
   Button,
   Group,
@@ -27,17 +20,12 @@ export default function Page() {
   const form = useForm({
     initialValues: {
       email: "",
-      password: "",
       rememberMe: false,
     },
 
     // functions will be used to validate values at corresponding key
     validate: {
       email: isEmail("Invalid email"),
-      password: hasLength(
-        { min: 6, max: 10 },
-        "Password must be 6-10 characters long"
-      ),
     },
   });
 
