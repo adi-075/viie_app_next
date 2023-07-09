@@ -1,11 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-  images: {
-    domains: ["www.unsplash.com"],
-  },
-};
+const withPWA = require("@imbios/next-pwa")({
+  dest: "public",
+  disable: process.env.NODE_ENV === "development",
+  register: true,
+  skipWaiting: true,
+});
 
-module.exports = nextConfig;
+module.exports = withPWA({
+  // next.js config
+});

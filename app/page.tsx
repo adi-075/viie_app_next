@@ -1,115 +1,140 @@
-import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { homeData } from "./homeData";
-import { Mandali } from "next/font/google";
-import Events from "./Events";
-import bgmb from "../bg-image-mb.jpg";
-import { Source_Sans_Pro } from "next/font/google";
-const source = Source_Sans_Pro({ subsets: ["latin"], weight: "400" });
-// import "./homepage.css";
+import { Metadata } from "next";
 
-const page = () => {
+export default function Home() {
   return (
-    <>
-      <title>Home</title>
-      <div className="flex items-center justify-center h-screen mb-12 md:bg-fixed bg-center bg-cover custom-img-mb sm:custom-img">
-        {/* Overlay  */}
-        <div className="absolute top-0 left-0 right-0 bottom-0 z-[2]" />
-        <div className="p-5 text-white z-[2] mt-[-10rem]">
-          <h2 className="text-5xl font-bold text-center">
-            Welcome to Vidyalankar <br /> Institute for International <br />{" "}
-            Education
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+          Get started by editing&nbsp;
+          <code className="font-mono font-bold">app/page.tsx</code>
+        </p>
+        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+          <a
+            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            By{" "}
+            <Image
+              src="/vercel.svg"
+              alt="Vercel Logo"
+              className="dark:invert"
+              width={100}
+              height={24}
+              priority
+            />
+          </a>
+        </div>
+      </div>
+
+      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
+        <Image
+          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+          src="/next.svg"
+          alt="Next.js Logo"
+          width={180}
+          height={37}
+          priority
+        />
+      </div>
+
+      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
+        <a
+          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            Docs{" "}
+            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span>
           </h2>
-        </div>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <h2 className="text-5xl font-bold text-center mb-5">This is VIIE</h2>
-        <div className="text-center text-xl md:text-2xl p-3 sm:p-0 break-normal max-w-[1000px]">
-          <p className={source.className}>
-            Vidyalankar has collaborated with top universities in the USA,
-            CANADA, UK, Australia, and New Zealand and has developed some unique
-            programs at the undergraduate and postgraduate levels. Our programs
-            equip the students with the right toolset, suitable skillset and,
-            more importantly, the right mindset. Ever since they were started in
-            2006, they have been well received by the students, their parents
-            and by the industry.
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Find in-depth information about Next.js features and API.
           </p>
-        </div>
-        <Link href="/about">
-          <button className="mt-5 bg-[#9c0e0e] text-white text-xl font-bold py-4 px-12 rounded mb-10">
-            More About VIIE
-          </button>
-        </Link>
-      </div>
-      <div className="flex flex-col justify-center items-center bg-[#f4f4f4]">
-        <h1 className="mx-auto text-4xl font-bold mb-5 my-10">Academics</h1>
-        <div>
-          <p className="{source.className} text-center text-xl md:text-2xl break-normal max-w-[1000px]">
-            The main objective of education is to equip students with the
-            necessary skills and knowledge to actively participate as
-            responsible members of society and make significant contributions.
+        </a>
+
+        <a
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            Learn{" "}
+            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span>
+          </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Learn about Next.js in an interactive course with&nbsp;quizzes!
           </p>
-          <br />
-        </div>
-        <div className="event-list grid grid-fow-row md:grid-flow-col gap-10 md:gap-14 justify-center px-2">
-          <div className="hover:scale-125 transition-all duration-500 cursor-pointer">
-            <Image
-              src="/images/cs.png"
-              alt="Computer Science Program"
-              width={300}
-              height={300}
-            />
-            <p>Computer Science/IT</p>
-          </div>
+        </a>
 
-          <div className="hover:scale-125 transition-all duration-500 cursor-pointer">
-            <Image
-              src="/images/management.png"
-              alt="Management Program"
-              width={300}
-              height={300}
-            />
-            <p>Management</p>
-          </div>
+        <a
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            Templates{" "}
+            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span>
+          </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Explore the Next.js 13 playground.
+          </p>
+        </a>
 
-          <div className="hover:scale-125 transition-all duration-500 cursor-pointer">
-            <Image
-              src="/images/massmedia.png"
-              alt="Mass Media Program"
-              width={300}
-              height={300}
-            />
-            <p>Mass Media</p>
-            <br />
-          </div>
-        </div>
-
-        <br />
+        <a
+          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            Deploy{" "}
+            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span>
+          </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          </p>
+        </a>
       </div>
-      <section className="mx-auto w-fit p-12">
-        <h1 className="font-bold text-black text-2xl text-center">
-          Under Development
-        </h1>
-        {/* card  */}
-        <div className="w-72 h-fit group">
-          <div className="relative overflow-hidden">
-            <Image
-              src="/images/penn-state.png"
-              alt="Penn State Campus"
-              className="object-fill h-48 w-96"
-              width={200}
-              height={200}
-            />
-            <div className="absolute h-full w-full bg-black/20 flex items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 hover:opacity-100 transition-all duration-300">
-              <button className="bg-black text-white py-2 px-5">Alumni</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Events />
-    </>
+    </main>
   );
-};
+}
 
-export default page;
+const APP_NAME = "next-pwa example";
+const APP_DESCRIPTION = "This is an example of using next-pwa plugin";
+
+export const metadata: Metadata = {
+  title: "VIIE",
+  description: APP_DESCRIPTION,
+  applicationName: APP_NAME,
+  appleWebApp: {
+    capable: true,
+    title: APP_NAME,
+    statusBarStyle: "default",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  themeColor: "#FFFFFF",
+  viewport:
+    "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
+  manifest: "/manifest.json",
+  icons: [
+    { rel: "apple-touch-icon", url: "/icons/apple-touch-icon.png" },
+    { rel: "shortcut icon", url: "/favicon.ico" },
+  ],
+  keywords: ["nextjs", "pwa", "next-pwa"],
+};
