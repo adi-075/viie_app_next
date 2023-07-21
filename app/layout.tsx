@@ -14,8 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-white">
       <Nav />
+      {/* <div className="absolute top-0">{children}</div> */}
       {children}
       <br />
     </html>

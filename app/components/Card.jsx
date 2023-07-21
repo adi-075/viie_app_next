@@ -34,7 +34,7 @@ function Card(props) {
           </div>
         </a>
         <a href="/csu">
-          <div class="align-middle items-center text-center relative flex justify-center">
+          <div className="align-middle items-center text-center relative flex justify-center">
             <img
               src="/csu.jpg"
               alt="Rutgers"
@@ -48,7 +48,7 @@ function Card(props) {
           </div>
         </a>
         <a href="/csu">
-          <div class="align-middle items-center text-center relative flex justify-center">
+          <div className="align-middle items-center text-center relative flex justify-center">
             <img
               src="/csu.jpg"
               alt="Rutgers"
@@ -62,7 +62,7 @@ function Card(props) {
           </div>
         </a>
         <a href="/csu">
-          <div class="align-middle items-center text-center relative flex justify-center">
+          <div className="align-middle items-center text-center relative flex justify-center">
             <img
               src="/csu.jpg"
               alt="Rutgers"
