@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Card(props) {
   return (
-    <div className="xl:hidden">
+    <div className="md:hidden">
       <h1 class="font-bold text-4xl text-center mt-7">US UNIVERSITIES</h1>
       <div className="flex flex-col space-y-10 justify-center items-center h-full mx-7 mt-10 relative xl:hidden">
         <a href="/rutgers">
