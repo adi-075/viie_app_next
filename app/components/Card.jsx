@@ -13,7 +13,7 @@ function Card(props) {
               alt="Rutgers"
               width={500}
               height={500}
-              className="rounded-2xl shadow-xl drop-shadow-lg"
+              className="rounded-2xl shadow-xl drop-shadow-lg brightness-50"
             />
             <h1 className="text-2xl absolute z-10 font-sans font-bold m-2 text-white">
               RUTGERS UNIVERSITY
@@ -27,7 +27,7 @@ function Card(props) {
               alt="Rutgers"
               width={500}
               height={500}
-              className="rounded-2xl shadow-xl drop-shadow-lg"
+              className="rounded-2xl shadow-xl drop-shadow-lg brightness-50"
             />
             <h1 className="text-2xl absolute z-10 font-sans font-bold m-2 text-white">
               PENN STATE UNIVERSITY
@@ -41,7 +41,7 @@ function Card(props) {
               alt="Rutgers"
               width={500}
               height={500}
-              className="rounded-2xl shadow-xl drop-shadow-lg"
+              className="rounded-2xl shadow-xl drop-shadow-lg brightness-50"
             />
             <h1 className="text-2xl absolute z-10 font-sans font-bold m-2 text-white">
               CALIFORNIA STATE UNIVERSITY
@@ -60,7 +60,7 @@ function Card(props) {
               alt="University of lethbridge"
               width={500}
               height={500}
-              className="rounded-2xl shadow-xl drop-shadow-lg"
+              className="rounded-2xl shadow-xl drop-shadow-lg brightness-50"
             />
             <h1 className="text-2xl absolute z-10 font-sans font-bold m-2 text-white">
               UNIVERSITY OF LETHBRIDGE
@@ -74,7 +74,7 @@ function Card(props) {
               alt="University of Fraser Valley"
               width={500}
               height={500}
-              className="rounded-2xl shadow-xl drop-shadow-lg"
+              className="rounded-2xl shadow-xl drop-shadow-lg brightness-50"
             />
             <h1 className="text-2xl absolute z-10 font-sans font-bold m-2 text-white">
               UNIVERSITY OF LETHBRIDGE
