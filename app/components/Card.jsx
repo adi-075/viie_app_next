@@ -77,7 +77,7 @@ function Card(props) {
               className="rounded-2xl shadow-xl drop-shadow-lg brightness-50"
             />
             <h1 className="text-2xl absolute z-10 font-sans font-bold m-2 text-white">
-              UNIVERSITY OF LETHBRIDGE
+              UNIVERSITY OF FRASER VALLEY
             </h1>
           </div>
         </a>
