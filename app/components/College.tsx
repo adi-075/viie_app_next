@@ -14,11 +14,11 @@ interface college {
 export default function College(props: college) {
   return (
     <>
-      <div className="hero relative top-0 left-0 bg-fixed -z-10">
+      <div className="hero relative -mt-10">
         {/* <img src="/rutgers.jpg" alt="Rutgers" /> */}
-        {/* <img src={props.hero} className="" /> */}
+        <img src={props.hero} height={100} />
       </div>
-      <div className="shadow-md flex flex-row space-x-5 py-7 justify-center items-center mx-auto">
+      <div className="shadow-md flex flex-row py-7 justify-center items-center mx-auto">
         <div>
           <img
             src={props.logo}
@@ -29,7 +29,7 @@ export default function College(props: college) {
           />
         </div>
         <div>
-          <h1 className="font-bold text-xl break-before-avoid-page m-1">
+          <h1 className="font-bold text-xl px-8 break-before-avoid-page">
             {props.uni}
           </h1>
         </div>
