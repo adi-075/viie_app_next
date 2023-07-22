@@ -10,6 +10,7 @@ export default function page() {
         logo="/logo/psu.png"
         size={100}
         address="1031 Edgecomb Ave, York, PA 17403, United States"
+        hero="/psu.jpg"
       />
     </div>
   );
