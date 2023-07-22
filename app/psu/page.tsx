@@ -8,7 +8,7 @@ export default function page() {
         uni="PENN STATE UNIVERSITY"
         link="https://www.psu.edu/"
         logo="/logo/psu.png"
-        size={100}
+        size={80}
         address="1031 Edgecomb Ave, York, PA 17403, United States"
         hero="/psu.jpg"
       />
