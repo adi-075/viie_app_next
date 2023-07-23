@@ -4,7 +4,7 @@ import Image from "next/image";
 function Card(props) {
   return (
     <div className="md:hidden">
-      <h1 class="font-bold text-4xl text-center mt-7">US UNIVERSITIES</h1>
+      <h1 className="font-bold text-4xl text-center mt-7">US UNIVERSITIES</h1>
       <div className="flex flex-col space-y-10 justify-center items-center h-full mx-7 mt-10 relative xl:hidden">
         <a href="/rutgers">
           <div className="align-middle items-center text-center relative flex justify-center">
@@ -49,7 +49,7 @@ function Card(props) {
           </div>
         </a>
       </div>
-      <h1 class="font-bold text-4xl text-center mt-10">
+      <h1 className="font-bold text-4xl text-center mt-10">
         CANADIAN UNIVERSITIES
       </h1>
       <div className="flex flex-col space-y-10 justify-center items-center h-full mx-7 mt-10 relative xl:hidden">
